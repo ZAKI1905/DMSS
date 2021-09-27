@@ -1,4 +1,4 @@
-# DMSS
+# DMSS (Dark Matter Solar Signal)
 This program was used in "[Constraining Time Dependent Dark Matter Signals from the Sun](https://arxiv.org/abs/2109.11662)".
 
 ## Info 
