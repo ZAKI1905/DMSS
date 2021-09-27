@@ -1,0 +1,6 @@
+/*          Automatically generated             */
+// The configured options and settings for DMSS
+#define DMSS_VERSION_MAJOR ${DMSS_VERSION_MAJOR}
+#define DMSS_VERSION_MINOR ${DMSS_VERSION_MINOR}
+#define DMSS_VERSION_STR "${DMSS_VERSION_MAJOR}.${DMSS_VERSION_MINOR}"
+#define DMSS_RELEASE_DATE "${DMSS_RELEASE_DATE}"

@@ -1,0 +1,21 @@
+set(DMSS_SRC_Files
+    src/AMS.cpp                 
+    src/ChiSqrd.cpp             
+    src/GenericModel.cpp        
+    src/Analysis.cpp            
+    src/DAMPE.cpp               
+    src/HybPdf.cpp              
+    src/Prog.cpp
+    src/Bin.cpp                 
+    src/DarkPhoton.cpp          
+    src/LogLikeli.cpp     
+    src/LikeLi_Eq.cpp      
+    src/LogLikeli_Gradient.cpp           
+    src/Satellite.cpp
+    src/SatBundle.cpp
+    src/CALET.cpp               
+    src/Data.cpp                                    
+    src/Model.cpp               
+    src/Fitter.cpp
+    PARENT_SCOPE
+)
