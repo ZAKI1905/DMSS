@@ -17,13 +17,14 @@ If you use this package please cite:
 
 For BibTeX style citation use:
 ```
-@misc{zakeri2021constraining,
-      title={Constraining Time Dependent Dark Matter Signals from the Sun}, 
-      author={Mohammadreza Zakeri and Yu-Feng Zhou},
-      year={2021},
-      eprint={2109.11662},
-      archivePrefix={arXiv},
-      primaryClass={hep-ph}
+@article{Zakeri:2021cur,
+    author = "Zakeri, Mohammadreza and Zhou, Yu-Feng",
+    title = "{Constraining Time Dependent Dark Matter Signals from the Sun}",
+    eprint = "2109.11662",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "9",
+    year = "2021"
 }
 ```
 
