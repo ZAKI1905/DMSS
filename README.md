@@ -33,7 +33,7 @@ Check CMakeLists.txt.
 
 Root:
 
-See https://root.cern.ch/license for Root license.
+See https://root.cern/about/license for Root's license.
 
 ```
 Rene Brun and Fons Rademakers,
