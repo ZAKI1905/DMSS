@@ -26,3 +26,29 @@ For BibTeX style citation use:
       primaryClass={hep-ph}
 }
 ```
+
+# References
+Check CMakeLists.txt.
+
+Root:
+
+See https://root.cern.ch/license for Root license.
+
+```
+Rene Brun and Fons Rademakers,
+ROOT - An Object Oriented Data Analysis Framework,
+Proceedings AIHENP'96 Workshop, Lausanne, Sep. 1996, Nucl. Inst. & Meth. in Phys. Res. A 389 (1997) 81-86. See also http://root.cern.ch/
+```
+
+Minuit2:
+```
+F. James, M. Roos,
+Minuit - a system for function minimization and analysis of the parameter errors and correlations,
+Computer Physics Communications,
+Volume 10, Issue 6,
+1975,
+Pages 343-367,
+ISSN 0010-4655,
+https://doi.org/10.1016/0010-4655(75)90039-9.
+(https://www.sciencedirect.com/science/article/pii/0010465575900399)
+```
