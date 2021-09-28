@@ -29,7 +29,7 @@ For BibTeX style citation use:
 ```
 
 ## Setup
-You need Root, Minuit2 (included in Root), gsl, and OpenMP. The CMake file will use find_package() to find these packages. If find_package() fails, open CMakeLists.txt in the main folder and edit the cmake path for root. Compile as follows:
+You need [Root](https://root.cern/), Minuit2 (included in Root), [GSL](https://www.gnu.org/software/gsl), and [OpenMP](https://www.openmp.org). The [Confind](https://github.com/ZAKI1905/CONFIND) & Zaki libraries are already included inside dependencies (Only for Mac OS). Confind generates the contour plots and it uses OpenMP, but the main code for DMSS doesn't directly use OpenMP. The CMake file will use find_package() to find these packages. If find_package() fails, open CMakeLists.txt in the main folder and edit the cmake path for root. Compile as follows:
   1. Create a build folder (e.g. mkdir build).
   2. Change directory to the build folder (e.g. cd build)
   3. Run cmake (e.g. cmake ..)
@@ -39,6 +39,12 @@ You need Root, Minuit2 (included in Root), gsl, and OpenMP. The CMake file will 
 
 ## References
 Check CMakeLists.txt.
+
+GSL:
+```
+M. Galassi et al, GNU Scientific Library Reference Manual (3rd Ed.), ISBN 0954612078.
+http://www.gnu.org/software/gsl/
+```
 
 Root:
 
@@ -61,4 +67,10 @@ Pages 343-367,
 ISSN 0010-4655,
 https://doi.org/10.1016/0010-4655(75)90039-9.
 (https://www.sciencedirect.com/science/article/pii/0010465575900399)
+```
+
+OpenMP:
+```
+The OpenMP API specification for parallel programming
+https://www.openmp.org/
 ```
