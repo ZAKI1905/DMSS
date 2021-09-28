@@ -1,0 +1,258 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "main_combined"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 111,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 112,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -pthread -Xclang -fopenmp -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Xclang"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fopenmp"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "/Users/zaki/wrk_dir/DMSolarSignal/DMSS/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/opt/local/include/root6/Minuit2"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/opt/local/libexec/root6/include/root"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/Users/zaki/wrk_dir/DMSolarSignal/DMSS/dependencies/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/local/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/usr/local/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "DMSS::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "main_combined::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "main/main_combined"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-pthread -Xclang -fopenmp -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libDMSS.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libCore.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libGpad.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libGraf.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libHist.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libMathCore.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libMathMore.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libGenVector.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libPhysics.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libRooFit.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libRooFitCore.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libRooStats.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libRIO.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../dependencies/lib/Zaki/darwin/libZaki.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../dependencies/lib/Confind/darwin/libConfind.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/root6/libMinuit2.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/libgsl.dylib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/opt/local/lib/libgslcblas.dylib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/local/lib/libomp.dylib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "main_combined",
+	"nameOnDisk" : "main_combined",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "main/main_combined.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

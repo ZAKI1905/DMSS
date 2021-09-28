@@ -19,10 +19,6 @@ if(${_host_name} STREQUAL "Mohammadrezas-MacBook-Pro.local")
     set(ROOT_INC_DIR /opt/local/libexec/root6/include/root)
     set(MINUIT_INC_DIR /opt/local/include/root6/Minuit2)
     set(MINUIT_LIB_DIR /opt/local/lib/root6)
-    set(GSL_INC_DIR /opt/local/include)
-    set(GSL_LIB_DIR	/opt/local/lib)
-    # set(CMAKE_CXX_COMPILER clang++-mp-9.0)
-    # set(OpenMP_CXX_FLAGS "-Xpreprocessor -fopenmp")
     set(OS_NAME darwin)
 
 else()
@@ -32,6 +28,8 @@ else()
 endif()
 
 set(DEP_INC_DIR dependencies/include)
+
+find_package(GSL REQUIRED)
 
 set(ROOT_LIBS
     ${ROOT_LIB_DIR}/libCore.so
@@ -49,7 +47,6 @@ set(ROOT_LIBS
 )
 
 set(MINUIT_LIB ${MINUIT_LIB_DIR}/libMinuit2.so)
-set(GSL_LIB ${GSL_LIB_DIR}/libgsl.a ${GSL_LIB_DIR}/libgslcblas.a)
 set(ZAKI_LIB ${DEP_LIB_DIR}/Zaki/${OS_NAME}/libZaki.a)
 set(CONFIND_LIB ${DEP_LIB_DIR}/Confind/${OS_NAME}/libConfind.a)
 
@@ -73,7 +70,7 @@ target_include_directories(DMSS
                             PUBLIC
                             ${CMAKE_CURRENT_SOURCE_DIR}/include
                             ${MINUIT_INC_DIR}
-                            ${GSL_INC_DIR}
+                            ${GSL_INCLUDE_DIRS}
                             ${ROOT_INC_DIR}
                             ${DEP_INC_DIR}
                             )
@@ -83,7 +80,8 @@ target_link_libraries(DMSS PUBLIC
                         ${ZAKI_LIB} 
                         ${CONFIND_LIB} 
                         ${MINUIT_LIB}
-                        ${GSL_LIB}
+                        GSL::gsl
+                        GSL::gslcblas
                         OpenMP::OpenMP_CXX) 
 
                             
@@ -124,7 +122,7 @@ foreach(src ${DMSS_main_sources})
 endforeach()
 
 include(InstallRequiredSystemLibraries)
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(CPACK_PACKAGE_VERSION_MAJOR "${DMSS_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${DMSS_VERSION_MINOR}")
 include(CPack)

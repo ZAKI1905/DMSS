@@ -1,0 +1,154 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "include",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include"
+				},
+				{
+					"build" : "src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "main",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "main"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "DMSS",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DMSS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DMSS-Debug-d05d8f1405cf15cd299f.json",
+					"name" : "DMSS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_ams::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_ams-Debug-ffd16229afbadc869bc4.json",
+					"name" : "main_ams",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_calet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_calet-Debug-e5507e83b4fab31f9d59.json",
+					"name" : "main_calet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_combined::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_combined-Debug-8f4180a2a54d39a8d35d.json",
+					"name" : "main_combined",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_dampe::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_dampe-Debug-e96f1aa935c2548ea522.json",
+					"name" : "main_dampe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_fitter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_fitter-Debug-6e71f6a6dacc9e64d221.json",
+					"name" : "main_fitter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "time_binning::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-time_binning-Debug-29561da52bc7d211b8d1.json",
+					"name" : "time_binning",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/zaki/wrk_dir/DMSolarSignal/DMSS/build",
+		"source" : "/Users/zaki/wrk_dir/DMSolarSignal/DMSS"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}
