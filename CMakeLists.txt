@@ -1,7 +1,17 @@
+# ...........................................................
+#                   EDIT THIS SECTION ONLY
+# ...........................................................
+# Add the path to "ROOTConfig.cmake" below :
+
+set(root_cmake_path "/opt/local/libexec/root6/share/root/cmake")
+
+# ...........................................................
+#          !    DON'T EDIT BELOW THIS LINE    !
+# ...........................................................
 cmake_minimum_required(VERSION 3.10)
 
-# set the project name and version
 project(DMSS VERSION 1.0 DESCRIPTION "DMSS: Dark Matter Solar Signals")
+
 
 string(TIMESTAMP DMSS_RELEASE_DATE "%m, %d, %Y")
 
@@ -11,44 +21,30 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(DEP_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib)
-
-cmake_host_system_information(RESULT _host_name QUERY HOSTNAME)
-
-if(${_host_name} STREQUAL "Mohammadrezas-MacBook-Pro.local")
-    set(ROOT_LIB_DIR /opt/local/lib/root6)
-    set(ROOT_INC_DIR /opt/local/libexec/root6/include/root)
-    set(MINUIT_INC_DIR /opt/local/include/root6/Minuit2)
-    set(MINUIT_LIB_DIR /opt/local/lib/root6)
-    set(OS_NAME darwin)
-
-else()
-    message("Error: Hostname unknown!")
-    message("Error: Setup the include and library paths in 'CMakeLists.txt'.")
-    message("Your host name: " ${_host_name})
-endif()
-
 set(DEP_INC_DIR dependencies/include)
 
+set(CMAKE_PREFIX_PATH ${root_cmake_path})
+
 find_package(GSL REQUIRED)
+find_package(ROOT COMPONENTS Minuit2)
 
 set(ROOT_LIBS
-    ${ROOT_LIB_DIR}/libCore.so
-    ${ROOT_LIB_DIR}/libGpad.so
-    ${ROOT_LIB_DIR}/libGraf.so
-    ${ROOT_LIB_DIR}/libHist.so
-    ${ROOT_LIB_DIR}/libMathCore.so
-    ${ROOT_LIB_DIR}/libMathMore.so
-    ${ROOT_LIB_DIR}/libGenVector.so
-    ${ROOT_LIB_DIR}/libPhysics.so
-    ${ROOT_LIB_DIR}/libRooFit.so
-    ${ROOT_LIB_DIR}/libRooFitCore.so
-    ${ROOT_LIB_DIR}/libRooStats.so
-    ${ROOT_LIB_DIR}/libRIO.so
+    ROOT::Core
+    ROOT::Gpad
+    ROOT::Graf
+    ROOT::Hist
+    ROOT::MathCore
+    ROOT::MathMore
+    ROOT::GenVector
+    ROOT::Physics
+    ROOT::RooFit
+    ROOT::RooFitCore
+    ROOT::RooStats
+    ROOT::RIO
 )
 
-set(MINUIT_LIB ${MINUIT_LIB_DIR}/libMinuit2.so)
-set(ZAKI_LIB ${DEP_LIB_DIR}/Zaki/${OS_NAME}/libZaki.a)
-set(CONFIND_LIB ${DEP_LIB_DIR}/Confind/${OS_NAME}/libConfind.a)
+set(ZAKI_LIB ${DEP_LIB_DIR}/Zaki/${CMAKE_SYSTEM_NAME}/libZaki.a)
+set(CONFIND_LIB ${DEP_LIB_DIR}/Confind/${CMAKE_SYSTEM_NAME}/libConfind.a)
 
 # configure a header file to pass some of the CMake settings
 # to the source code
@@ -69,9 +65,8 @@ set_target_properties(DMSS PROPERTIES VERSION ${PROJECT_VERSION})
 target_include_directories(DMSS 
                             PUBLIC
                             ${CMAKE_CURRENT_SOURCE_DIR}/include
-                            ${MINUIT_INC_DIR}
                             ${GSL_INCLUDE_DIRS}
-                            ${ROOT_INC_DIR}
+                            ${ROOT_INCLUDE_DIRS}
                             ${DEP_INC_DIR}
                             )
 
@@ -79,7 +74,7 @@ target_link_libraries(DMSS PUBLIC
                         ${ROOT_LIBS} 
                         ${ZAKI_LIB} 
                         ${CONFIND_LIB} 
-                        ${MINUIT_LIB}
+                        ROOT::Minuit2
                         GSL::gsl
                         GSL::gslcblas
                         OpenMP::OpenMP_CXX) 
@@ -112,9 +107,8 @@ foreach(src ${DMSS_main_sources})
     target_link_libraries(${src} PUBLIC DMSS)
     target_include_directories(${src} PUBLIC  
                                 ${CMAKE_CURRENT_SOURCE_DIR}/include
-                                ${MINUIT_INC_DIR}
-                                ${GSL_INC_DIR}
-                                ${ROOT_INC_DIR}
+                                ${GSL_INCLUDE_DIRS}
+                                ${ROOT_INCLUDE_DIRS}
                                 ${DEP_INC_DIR}
                                 )
     install(FILES "main/${src}.cpp" DESTINATION main)

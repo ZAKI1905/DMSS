@@ -28,7 +28,16 @@ For BibTeX style citation use:
 }
 ```
 
-# References
+## Setup
+You need Root, Minuit2 (included in Root), gsl, and OpenMP. The CMake file will use find_package() to find these packages. If find_package() fails, open CMakeLists.txt in the main folder and edit the cmake path for root. Compile as follows:
+  1. Create a build folder (e.g. mkdir build).
+  2. Change directory to the build folder (e.g. cd build)
+  3. Run cmake (e.g. cmake ..)
+  4. Run make (or make -j) 
+  5. This executables should be created inside the build directory.
+
+
+## References
 Check CMakeLists.txt.
 
 Root:
