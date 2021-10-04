@@ -3,10 +3,6 @@ This program was used in "[Constraining Time Dependent Dark Matter Signals from 
 
 ## Info 
 
-<!--   *Constraining Time Dependent Dark Matter Signals from the Sun*\
-  Mohammadreza Zakeri and Yu-Feng Zhou\
-  https://arxiv.org/abs/2109.11662 -->
-
 
 If you use this package please cite:
 ```
