@@ -30,7 +30,7 @@ You need [Root](https://root.cern/), Minuit2 (included in Root), [GSL](https://w
   2. Change directory to the build folder (e.g. cd build)
   3. Run cmake (e.g. cmake ..)
   4. Run make (or make -j) 
-  5. This executables should be created inside the build directory.
+  5. The executables should be created inside the build directory.
 
 
 ## References
