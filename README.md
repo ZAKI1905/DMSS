@@ -25,7 +25,7 @@ For BibTeX style citation use:
 ```
 
 ## Setup
-You need [Root](https://root.cern/), Minuit2 (included in Root), [GSL](https://www.gnu.org/software/gsl), and [OpenMP](https://www.openmp.org). The [Confind](https://github.com/ZAKI1905/CONFIND) & Zaki libraries are already included inside dependencies (Only for Mac OS). Confind generates the contour plots and it uses OpenMP, but the main code for DMSS doesn't directly use OpenMP. The CMake file will use find_package() to find these packages. If find_package() fails, open CMakeLists.txt in the main folder and edit the cmake path for root. Compile as follows:
+You need [Root](https://root.cern/), Minuit2 (included in Root), [GSL](https://www.gnu.org/software/gsl), and [OpenMP](https://www.openmp.org). [Confind](https://github.com/ZAKI1905/CONFIND) & Zaki libraries are already included inside dependencies (Only for Mac OS). Confind generates the contour plots and it uses OpenMP, but the main code for DMSS doesn't directly use OpenMP. The CMake file will use find_package() to find these packages. If find_package() fails, open CMakeLists.txt in the main folder and edit the cmake path for root. Compile as follows:
   1. Create a build folder (e.g. mkdir build).
   2. Change directory to the build folder (e.g. cd build)
   3. Run cmake (e.g. cmake ..)
